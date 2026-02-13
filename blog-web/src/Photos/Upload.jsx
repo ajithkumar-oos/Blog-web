@@ -40,7 +40,7 @@ function Upload() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/upload",
+        "https://personal-blog-web-backend.onrender.com",
         formData,
         {
           headers: {
