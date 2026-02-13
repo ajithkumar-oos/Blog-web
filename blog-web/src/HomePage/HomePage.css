@@ -1,0 +1,74 @@
+
+.head {
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+    border: 2px solid rgba(255, 255, 255, 0.18);
+
+}
+
+
+.src-img {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+.blog-rider-div{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 1200px;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  z-index: 20;
+  text-align: center;
+}
+
+/* .blog-rider-text {
+  font-size: 150px;
+  font-weight: bold;
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.5); 
+  text-shadow: 
+    0px 0px 8px rgba(255, 255, 255, 0.4),
+    0px 0px 25px rgba(255, 255, 255, 0.2),
+    -2px -2px 5px rgba(255, 255, 255, 0.1),
+    2px 2px 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+} */
+
+.blog-rider-text{
+  font-weight: bold;
+  background: linear-gradient(180deg, #ffffffe0, #c0c0c0, #9999992d, #ffffff16);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: shine 3s infinite linear;
+  /* fluid size */
+  font-size: clamp(36px, 10vw, 120px);
+  line-height: 1;
+}
+.overlay {
+  position: absolute; 
+  width: 100%; 
+  height: 92%; 
+  top: 50px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* Black background with opacity */
+  z-index: 12; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+.phrase{
+    margin-top: 1rem;
+    opacity: 0.85;
+    font-size: clamp(14px, 3vw, 20px);
+}
+
+@media (max-width: 768px){
+  .overlay{ height: 100%; }
+  .blog-rider-div{ top: 45%; }
+}

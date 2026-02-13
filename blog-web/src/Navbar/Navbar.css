@@ -1,0 +1,37 @@
+ 
+
+       
+.navbar{
+    position: absolute;
+    z-index: 10;
+   
+}
+       
+.nav-css{
+    position: absolute;
+    width: 100%;
+    background-color: black;
+    opacity: 0.2;
+     
+}
+.nav-line{
+    text-decoration: none;
+}
+.nav-line:hover{
+ text-decoration: underline ;
+ color: white;
+}
+.nav-line-2:hover{
+ text-decoration: underline;
+ color: white;
+}
+.nav-line-3:hover{
+ text-decoration: underline;
+ color: white;
+}
+  
+        
+
+        
+       
+        
