@@ -17,7 +17,7 @@ function Register() {
 
     try {
       const res = await axios.post(
-        "https://personal-blog-web-backend.onrender.com",
+        "https://personal-blog-web-backend.onrender.com/api/auth/register",
         data
       );
 
