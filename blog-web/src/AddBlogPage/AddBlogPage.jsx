@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const API_BASE = "http://localhost:5000/api";
+const API_BASE = "https://personal-blog-web-backend.onrender.com";
 
 function BlogCards() {
   const [posts, setPosts] = useState([]);
@@ -18,7 +18,7 @@ function BlogCards() {
 
   const fetchBlogs = async () => {
     try {
-      const res = await api.get(`${API_BASE}/viewallblogs`);
+      const res = await api.get(`${API_BASE}"/api/viewallblogs`);
       setPosts(res.data.Users || []);
     } catch (err) {
       console.error(err);
@@ -51,13 +51,13 @@ function BlogCards() {
         {posts.map(post => (
           <div className="pic1" key={post._id}>
             {post.image?.match(/\.(mp4|mov|avi|mkv)$/i) ? (
-              <video src={`http://localhost:5000/uploads/${post.image}`} className="card-img-top" controls />
+              <video src={`https://personal-blog-web-backend.onrender.com/api/uploads/${post.image}`} className="card-img-top" controls />
             ) : (
               <img
-                src={post.image ? `http://localhost:5000/uploads/${post.image}` : "https://via.placeholder.com/300"}
+                src={post.image ? `https://personal-blog-web-backend.onrender.com/api/uploads/${post.image}` : "https://via.placeholder.com/300"}
                 className="card-img-top"
                 alt={post.title}
-                onClick={() => openLightbox(`http://localhost:5000/uploads/${post.image}`, false)}
+                onClick={() => openLightbox(`https://personal-blog-web-backend.onrender.com/api/uploads/${post.image}`, false)}
               />
             )}
             <div className="card-body">
