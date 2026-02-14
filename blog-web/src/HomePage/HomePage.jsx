@@ -1,4 +1,4 @@
-import "./Homepage.css"
+import "./HomePage.css"
 import imgone from "../../public/Images/one.jpg"
 import imgtwo from "../../public/Images/two.jpg"
 import imgthree from "../../public/Images/three.jpg"
