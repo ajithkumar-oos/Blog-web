@@ -51,13 +51,13 @@ function BlogCards() {
         {posts.map(post => (
           <div className="pic1" key={post._id}>
             {post.image?.match(/\.(mp4|mov|avi|mkv)$/i) ? (
-              <video src={`https://personal-blog-web-backend.onrender.com/api/upload/${post.image}`} className="card-img-top" controls />
+              <video src={`https://personal-blog-web-backend.onrender.com/api/uploads/${post.image}`} className="card-img-top" controls />
             ) : (
               <img
-                src={post.image ? `https://personal-blog-web-backend.onrender.com/api/upload/${post.image}` : "https://via.placeholder.com/300"}
+                src={post.image ? `https://personal-blog-web-backend.onrender.com/api/uploads/${post.image}` : "https://via.placeholder.com/300"}
                 className="card-img-top"
                 alt={post.title}
-                onClick={() => openLightbox(`https://personal-blog-web-backend.onrender.com/api/upload/${post.image}`, false)}
+                onClick={() => openLightbox(`https://personal-blog-web-backend.onrender.com/api/uploads/${post.image}`, false)}
               />
             )}
             <div className="card-body">
