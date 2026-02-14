@@ -1,8 +1,5 @@
-import "./Homepage.css"
-import imgone from "../../public/Images/one.jpg"
-import imgtwo from "../../public/Images/two.jpg"
-import imgthree from "../../public/Images/three.jpg"
-import imgfor from "../../public/Images/for.jpeg"
+import "./HomePage.css"
+
 import imgfive from "../../public/Images/five.jpeg"
 
 function HomePage() {
