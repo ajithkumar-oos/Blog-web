@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import axios from "axios";
-const API_BASE = "https://personal-blog-web-backend.onrender.com";
+import axiosInstance from "../../api";
 
 function Login() {
   const navigate = useNavigate();
@@ -15,7 +14,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`${API_BASE}/api/auth/login`, data);
+      const res = await axiosInstance.post(`auth/login`, data);
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("user", JSON.stringify(res.data.user));
       alert("Login successful");

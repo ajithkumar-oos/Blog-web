@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+
+import axiosInstance from "../../api";
 
 const API_BASE = "https://personal-blog-web-backend.onrender.com";
 
@@ -9,7 +10,7 @@ function BlogCards() {
   const [lightbox, setLightbox] = useState({ open: false, src: "", isVideo: false });
   const user = JSON.parse(localStorage.getItem("user"));
 
-  const api = axios.create();
+  const api = axiosInstance.create();
   api.interceptors.request.use(config => {
     const token = localStorage.getItem("token");
     if (token) config.headers.Authorization = `Bearer ${token}`;
@@ -18,7 +19,7 @@ function BlogCards() {
 
   const fetchBlogs = async () => {
     try {
-      const res = await api.get(`${API_BASE}"/api/viewallblogs`);
+      const res = await api.get(`viewallblogs`);
       setPosts(res.data.Users || []);
     } catch (err) {
       console.error(err);

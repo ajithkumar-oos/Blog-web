@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "../Photos/Upload.css";
-import axios from 'axios';
+import axiosInstance from '../../api';
 
 function Upload() {
   const [preview, setPreview] = useState(null);
@@ -39,8 +39,8 @@ function Upload() {
     formData.append("description", description);
 
     try {
-      const response = await axios.post(
-        "https://personal-blog-web-backend.onrender.com/api/upload",
+      const response = await axiosInstance.post(
+        `upload`,
         formData,
         {
           headers: {

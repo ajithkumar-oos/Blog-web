@@ -1,7 +1,8 @@
 import "../register/Register.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import axios from "axios";
+
+import axiosInstance from "../../api";
 
 function Register() {
   const navigate = useNavigate();
@@ -16,8 +17,8 @@ function Register() {
     e.preventDefault();
 
     try {
-      const res = await axios.post(
-        "https://personal-blog-web-backend.onrender.com/api/auth/register",
+      const res = await axiosInstance.post(
+        `auth/register`,
         data
       );
 
